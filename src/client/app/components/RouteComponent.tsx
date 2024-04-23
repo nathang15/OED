@@ -34,6 +34,7 @@ import GroupsDetailComponent from './groups/GroupsDetailComponent';
 import ConversionsDetailComponent from './conversion/ConversionsDetailComponent';
 import * as queryString from 'query-string';
 import InitializationComponent from './InitializationComponent';
+import VisualUnitDetailComponent from './visual-unit/VisualUnitDetailComponent';
 
 interface RouteProps {
 	barStacking: boolean;
@@ -293,6 +294,7 @@ export default class RouteComponent extends React.Component<RouteProps> {
 								<Route path='/users' render={() => this.requireAuth(<UsersDetailContainer fetchUsers={() => []} />)} />
 								<Route path='/units' render={() => this.requireAuth(<UnitsDetailComponent />)} />
 								<Route path='/conversions' render={() => this.requireAuth(<ConversionsDetailComponent />)} />
+								<Route path='/visual-unit' render={() => this.requireAuth(<VisualUnitDetailComponent />)} />
 								<Route path='*' component={HomeComponent} />
 							</Switch>
 						</Router>

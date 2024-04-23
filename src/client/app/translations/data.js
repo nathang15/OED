@@ -454,6 +454,7 @@ const localeData = {
 		"users.successfully.edit.users": "Successfully edited users.",
 		"view.groups": "View Groups",
 		"visit": " or visit our ",
+		"visual-unit": "Visual Units Graph",
 		"website": "website",
 		"week": "Week",
 		"yes": "yes",

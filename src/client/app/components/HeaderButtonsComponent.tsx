@@ -68,6 +68,7 @@ export default function HeaderButtonsComponent() {
 		shouldCSVButtonDisabled: true,
 		shouldUnitsButtonDisabled: true,
 		shouldConversionsButtonDisabled: true,
+		shouldVisualUnitMapButtonDisabled: true,
 		// Translated menu title that depend on whether logged in.
 		menuTitle: '',
 		// link to help page for page choices. Should not see default but use general help URL.
@@ -103,7 +104,8 @@ export default function HeaderButtonsComponent() {
 			shouldMapsButtonDisabled: currentPage === 'maps',
 			shouldCSVButtonDisabled: currentPage === 'csv',
 			shouldUnitsButtonDisabled: currentPage === 'units',
-			shouldConversionsButtonDisabled: currentPage === 'conversions'
+			shouldConversionsButtonDisabled: currentPage === 'conversions',
+			shouldVisualUnitMapButtonDisabled: currentPage === 'visual-unit',
 		}));
 	}, [currentPage]);
 
@@ -235,6 +237,13 @@ export default function HeaderButtonsComponent() {
 								tag={Link}
 								to="/units">
 								<FormattedMessage id='units' />
+							</DropdownItem>
+							<DropdownItem
+								style={state.adminViewableLinkStyle}
+								disabled={state.shouldVisualUnitMapButtonDisabled}
+								tag={Link}
+								to="/visual-unit">
+								<FormattedMessage id='visual-unit' />
 							</DropdownItem>
 							<DropdownItem divider style={state.adminViewableLinkStyle} />
 							<DropdownItem
